@@ -1,9 +1,9 @@
 backend:
   name: github
-  repo: ThomasTsao0704/trip
+  repo: ThomasTsao0704/note
   branch: main
-  base_url: https://trip.s01yg3642.workers.dev
-  auth_endpoint: /auth
+  base_url: https://decap-github-oauth.s01yg3642.workers.dev
+  auth_endpoint: auth
 
 media_folder: "docs/static/uploads"
 public_folder: "/docs/static/uploads"
