@@ -1,0 +1,5 @@
+backend:
+  name: github
+  repo: ThomasTsao0704/note
+  base_url: https://decap-github-oauth.s01yg3642.workers.dev
+  auth_endpoint: auth
