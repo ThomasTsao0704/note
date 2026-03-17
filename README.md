@@ -1,38 +1,29 @@
-# 瑞士旅遊 2026
+完成總覽
+檔案結構：
 
-## 行程概覽
 
-**日期**：2026/6/13 (六) - 6/24 (三)，共12天
-**人數**：6位成人
-**交通**：自駕 + 火車
+trip/
+├── index.html          ← 登入頁 + 主應用
+├── styles.css          ← UI 樣式
+├── app.js              ← 核心邏輯
+├── users.json          ← 帳號密碼（SHA-256）
+├── search-index.json   ← 搜尋索引（自動產生）
+├── build-index.js      ← 更新索引腳本
+├── generate-hash.js    ← 新增帳號工具
+└── vault/              ← Obsidian 筆記庫（在此建立 .md）
+    └── 範例筆記.md
+預設帳號（請務必更改）：
 
----
+帳號	密碼
+admin	admin123
+guest	guest123
+更改密碼 / 新增帳號：
 
-## 快速導覽
 
-| 文件 | 說明 |
-|------|------|
-| [瑞士旅遊規劃](docs/瑞士旅遊規劃.md) | 每日行程安排 |
-| [住宿選項分析](docs/住宿選項分析.md) | 住宿預訂詳情與比較 |
-| [租車車款比較](docs/租車車款比較報告.md) | 租車選項分析 |
-| [交通成本分析](docs/六人交通成本比較分析.md) | 自駕 vs 火車成本比較 |
+node generate-hash.js 你的新密碼
+# 將輸出的 hash 填入 users.json
+每次新增筆記後：
 
----
 
-## 住宿總覽
-
-| 日期 | 地點 | 飯店 | 狀態 | 訂單 |
-|------|------|------|------|------|
-| 6/13 | 蘇黎世機場 | Zleep Hotel | ✅ 已訂 | [EN](docs/orders/hotel/2026-0613_Zurich-Kloten_Zleep-Hotel.pdf) / [中文](docs/orders/hotel/zh/2026-0613_Zurich-Kloten_Zleep-Hotel_zh.pdf) |
-| 6/14-15 | Goldau | Anstatthotel | ✅ 已訂 | [EN](docs/orders/hotel/2026-0614_Goldau_Anstatthotel.pdf) / [中文](docs/orders/hotel/zh/2026-0614_Goldau_Anstatthotel_zh.pdf) |
-| 6/16-19 | Interlaken | KARL Apartment | ✅ 已訂 | [EN](docs/orders/hotel/2026-0616_Interlaken_KARL-Apartment.pdf) / [中文](docs/orders/hotel/zh/2026-0616_Interlaken_KARL-Apartment_zh.pdf) |
-| 6/20 | Täsch | Hotel Matterhorn Inn | ✅ 已訂 | [EN](docs/orders/hotel/2026-0620_Tasch_Hotel-Matterhorn-Inn.pdf) / [中文](docs/orders/hotel/zh/2026-0620_Tasch_Hotel-Matterhorn-Inn_zh.pdf) |
-| 6/21-22 | Celerina | Chesa Pradatsch Suot 5 | ✅ 已訂 | [EN](docs/orders/hotel/2026-0621_Celerina_Chesa-Pradatsch-Suot-5.pdf) / [中文](docs/orders/hotel/zh/2026-0621_Celerina_Chesa-Pradatsch-Suot-5_zh.pdf) |
-| 6/23 | 蘇黎世 | - | ⏳ 待訂 | - |
-
----
-
-## 訂單文件
-
-- [飯店確認書 (英文)](docs/orders/hotel/README.md)
-- [飯店確認書 (中文)](docs/orders/hotel/zh/README.md)
+node build-index.js
+使用 Obsidian： 直接開啟 vault/ 資料夾作為 Vault 即可。

@@ -1,0 +1,12 @@
+[
+  {
+    "username": "admin",
+    "displayName": "Admin",
+    "hash": "888df25ae35772424a560c7152a1de794440e0ea5cfee62828333a456a506e05"
+  },
+  {
+    "username": "guest",
+    "displayName": "Guest",
+    "hash": "6b93ccba414ac1d0ae1e77f3fac560c748a6701ed6946735a49d463351518e16"
+  }
+]
